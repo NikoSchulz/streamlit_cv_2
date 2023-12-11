@@ -70,7 +70,7 @@ with top_data:
     st.snow()
     st.header("Softwareentwickler/Data Analyst")
     st.subheader(":red[Wer aufhört, besser zu werden, hat aufgehört, gut zu sein!]")
-    st.image("resource/images/Passbild.jpg", width=300)
+    st.image("streamlit_cv/resource/images/Passbild.jpg", width=300)
     st.subheader(""":blue[Hover over question mark for more information]:dark_sunglasses:""")
 
 # with top_d_second:
