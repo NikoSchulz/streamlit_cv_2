@@ -1,10 +1,13 @@
 import time
-
+from st_aggrid import AgGrid
+import pandas as pd
+from st_aggrid import GridUpdateMode, GridOptionsBuilder
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 import yfinance as yf
 from prophet import Prophet
+import numpy as np
 
 st.set_page_config(layout='wide')
 
@@ -17,11 +20,36 @@ class FinanceAnalyser:
         self.company_name = ""
         self.data = None
         self.option = ""
-        with st.expander("Click here for symbols"):
-            st.dataframe(self.symbol_mapping, use_container_width=True, hide_index=True)
-            st.markdown('# ')
-
+        self.insert_example_table()
         st.markdown("# ")
+
+    def filter_special_values(self):
+        symbols = ('GOOGL', 'MSFT', 'AAPL', 'BTC-USD')
+        top_df = self.symbol_mapping[self.symbol_mapping['Symbol'].isin(symbols)]
+        random_int = 30
+        bot_df = self.symbol_mapping.iloc[random_int: random_int + 5]
+        df = pd.concat([top_df, bot_df])
+        self.symbol_mapping = df
+
+    def insert_example_table(self):
+        with st.expander("Click here for symbols"):
+            builder = GridOptionsBuilder.from_dataframe(self.symbol_mapping)
+            builder.configure_selection(use_checkbox=True)
+            go = builder.build()
+            table = AgGrid(self.symbol_mapping, update_mode=GridUpdateMode.MODEL_CHANGED, gridOptions=go)
+            print(table)
+            try:
+                symbol_value = table.selected_rows[0]['Symbol']
+            except:
+                symbol_value = ''
+                print('mmm')
+                print(symbol_value)
+            if symbol_value:
+                print('mmm')
+                print(symbol_value)
+                self.start_analyse(symbol_value)
+            # st.dataframe(self.symbol_mapping, use_container_width=True, hide_index=True)
+            st.markdown('# ')
 
     def start_analyse(self, symbol):
         self.update_symbol(symbol)
