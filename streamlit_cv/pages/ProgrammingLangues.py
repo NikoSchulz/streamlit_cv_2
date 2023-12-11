@@ -8,7 +8,7 @@ st.set_page_config(layout='wide')
 
 
 def process_dataframe():
-    df = pd.read_csv(r"resource/csv_data/gh-push-event.json.csv")
+    df = pd.read_csv(r"streamlit_cv/resource/csv_data/gh-push-event.json.csv")
     df = df.pipe(group_data).pipe(filter_data)
     return df
 
