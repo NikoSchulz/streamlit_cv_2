@@ -100,7 +100,7 @@ with first_col:
 
 with second_col:
     with st.expander("Characteristics"):
-        st.image(r"streamlit_cv/resource/images/Characteristics.jpeg", width=500)
+        st.image(r"streamlit_cv/resource/images/Characteristics.jpeg")
 
 col1, col2 = st.columns(2)
 
