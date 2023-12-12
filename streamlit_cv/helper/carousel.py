@@ -7,17 +7,17 @@ def add_carousel():
             title="",
             text="Python",
             interval=None,
-            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/ec0e3f35-8a3c-4e17-a9b1-6fd2a4d2a332.jpg?raw=true",
+            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/pyton.jpg?raw=true",
         ),
         dict(
             title="",
             text="HTML",
-            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/html_image.jpg?raw=true",
+            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/html.jpg?raw=true",
         ),
         dict(
             title="",
             text="SQL",
-            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/sql_image.jpg?raw=true",
+            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/sql.jpg?raw=true",
         ),
     ]
 
