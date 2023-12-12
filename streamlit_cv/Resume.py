@@ -88,11 +88,12 @@ for education_info in get_education_list():
 
 with top_data:
     # st.snow()
-    st.info('This is a purely informational message', icon="ℹ️")
+    st.info('Hover over question mark for more information', icon=":dark_sunglasses:")
     st.header("Softwareentwickler/Data Analyst")
     st.subheader(":red[Wer aufhört, besser zu werden, hat aufgehört, gut zu sein!]")
     st.image(r"streamlit_cv/resource/images/Passbild.jpg", width=300)
-    st.subheader(""":blue[Hover over question mark for more information]:dark_sunglasses:""")
+    # st.subheader(""":blue[Hover over question mark for more information]:dark_sunglasses:""")
+    st.info('Hover over question mark for more information', icon=":dark_sunglasses:")
 
 # with top_d_second:
 #     st.markdown("***")
