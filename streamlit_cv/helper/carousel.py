@@ -6,18 +6,18 @@ def add_carousel():
         dict(
             title="Python",
             text="",
-            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/pyton.jpg?raw=true",
+            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/new_p.jpg?raw=true",
         ),
-        dict(
-            title="HTML",
-            text="",
-            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/html.jpg?raw=true",
-        ),
-        dict(
-            title="SQL",
-            text="",
-            img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/sql.jpg?raw=true",
-        ),
+        # dict(
+        #     title="HTML",
+        #     text="",
+        #     img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/html.jpg?raw=true",
+        # ),
+        # dict(
+        #     title="SQL",
+        #     text="",
+        #     img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/sql.jpg?raw=true",
+        # ),
     ]
 
     return carousel(items=test_items, width=1)
