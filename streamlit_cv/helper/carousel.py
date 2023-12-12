@@ -4,18 +4,18 @@ from streamlit_carousel import carousel
 def add_carousel():
     test_items = [
         dict(
-            title="",
-            text="Python",
+            title="Python",
+            text="",
             interval=None,
             img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/pyton.jpg?raw=true",
         ),
         dict(
-            title="",
+            title="HTML",
             text="HTML",
             img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/html.jpg?raw=true",
         ),
         dict(
-            title="",
+            title="SQL",
             text="SQL",
             img="https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/sql.jpg?raw=true",
         ),
