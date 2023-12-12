@@ -87,7 +87,8 @@ for education_info in get_education_list():
     education_infos.append(EducationData(**education_info))
 
 with top_data:
-    st.snow()
+    # st.snow()
+    st.info('This is a purely informational message', icon="ℹ️")
     st.header("Softwareentwickler/Data Analyst")
     st.subheader(":red[Wer aufhört, besser zu werden, hat aufgehört, gut zu sein!]")
     st.image(r"streamlit_cv/resource/images/Passbild.jpg", width=300)
