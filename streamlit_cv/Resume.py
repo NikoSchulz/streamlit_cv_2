@@ -3,12 +3,22 @@ from pydantic import BaseModel
 from collections import namedtuple
 import time
 
-from info_storage.education_info import get_education_list
-from info_storage.skills_info import get_ide_info, get_version_control_info, get_languages, get_python_libs_info
-
+from data.education_info import get_education_list
+from data.skills_info import get_ide_info, get_version_control_info, get_languages, get_python_libs_info
+st.set_page_config(layout='wide')
 SkillsInfo = namedtuple("Skills", ["topic", "tools", "description"])
 
-
+st.markdown(
+    f"""
+        <style>
+        .stApp {{
+            background: url("https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/b5bb3a28-623c-4f81-8be5-69fd80cc2425.jpg?raw=true");
+            background-size: cover
+        }}
+        </style>
+        """,
+    unsafe_allow_html=True
+)
 class EducationData(BaseModel):
     name: str
     link: str
@@ -16,7 +26,7 @@ class EducationData(BaseModel):
     period: str
 
 
-st.set_page_config(layout='wide')
+
 # st.markdown(
 #     """
 #     <style>
@@ -70,7 +80,7 @@ with top_data:
     st.snow()
     st.header("Softwareentwickler/Data Analyst")
     st.subheader(":red[Wer aufhört, besser zu werden, hat aufgehört, gut zu sein!]")
-    st.image("streamlit_cv/resource/images/Passbild.jpg", width=300)
+    st.image("resource/images/Passbild.jpg", width=300)
     st.subheader(""":blue[Hover over question mark for more information]:dark_sunglasses:""")
 
 # with top_d_second:
