@@ -88,7 +88,7 @@ for education_info in get_education_list():
 
 with top_data:
     # st.snow()
-    st.info('Hover over question mark for more information', icon=":dark_sunglasses:")
+    # st.info('Hover over question mark for more information', icon=":dark_sunglasses:")
     st.header("Softwareentwickler/Data Analyst")
     st.subheader(":red[Wer aufhört, besser zu werden, hat aufgehört, gut zu sein!]")
     st.image(r"streamlit_cv/resource/images/Passbild.jpg", width=300)
