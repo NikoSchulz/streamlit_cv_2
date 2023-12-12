@@ -93,7 +93,7 @@ with top_data:
     st.subheader(":red[Wer aufhört, besser zu werden, hat aufgehört, gut zu sein!]")
     st.image(r"streamlit_cv/resource/images/Passbild.jpg", width=300)
     # st.subheader(""":blue[Hover over question mark for more information]:dark_sunglasses:""")
-    st.info('Hover over question mark for more information', icon=":dark_sunglasses:")
+    st.info('Hover over question mark for more information', icon="🔥")
 
 # with top_d_second:
 #     st.markdown("***")
