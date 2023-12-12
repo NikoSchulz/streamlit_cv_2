@@ -54,6 +54,7 @@ with top_d_second:
     st.markdown('# ')
     st.markdown('# ')
     st.markdown('# ')
+    st.markdown('# ')
     add_carousel()
 
 first_col, second_col = st.columns(2)
