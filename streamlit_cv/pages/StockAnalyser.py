@@ -15,6 +15,7 @@ st.set_page_config(layout='wide')
 class FinanceAnalyser:
     def __init__(self):
         self.symbol_mapping = pd.read_csv(r"streamlit_cv/resource/csv_data/nasdaq_screener.csv", usecols=["Symbol", "Name"])
+        self.filter_special_values()
         self.example_symbols = self.symbol_mapping
         self.symbol = "META"
         self.company_name = ""
