@@ -1,7 +1,7 @@
 import streamlit as st
 from collections import namedtuple
 
-from info_storage.description import get_ide_description, get_version_control_description, get_programming_languages, \
+from data.description import get_ide_description, get_version_control_description, get_programming_languages, \
     get_python_libs_description
 
 SkillsInfo = namedtuple("Skills", ["topic", "tools"])

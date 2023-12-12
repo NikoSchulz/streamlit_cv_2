@@ -5,20 +5,23 @@ import time
 
 from data.education_info import get_education_list
 from data.skills_info import get_ide_info, get_version_control_info, get_languages, get_python_libs_info
+from helper.stlyle_page import add_bar_styling
+
 st.set_page_config(layout='wide')
 SkillsInfo = namedtuple("Skills", ["topic", "tools", "description"])
 
-st.markdown(
-    f"""
-        <style>
-        .stApp {{
-            background: url("https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/b5bb3a28-623c-4f81-8be5-69fd80cc2425.jpg?raw=true");
-            background-size: cover
-        }}
-        </style>
-        """,
-    unsafe_allow_html=True
-)
+add_bar_styling()
+# st.markdown(
+#     f"""
+#         <style>
+#         .stApp {{
+#             background: url("https://github.com/NikoSchulz/streamlit_cv_2/blob/master/streamlit_cv/resource/images/grey_robotor_4.jpg?raw=true");
+#             background-size: cover
+#         }}
+#         </style>
+#         """,
+#     unsafe_allow_html=True
+# )
 class EducationData(BaseModel):
     name: str
     link: str
@@ -80,7 +83,7 @@ with top_data:
     st.snow()
     st.header("Softwareentwickler/Data Analyst")
     st.subheader(":red[Wer aufhört, besser zu werden, hat aufgehört, gut zu sein!]")
-    st.image("resource/images/Passbild.jpg", width=300)
+    st.image(r"streamlit_cv/resource/images/Passbild.jpg", width=300)
     st.subheader(""":blue[Hover over question mark for more information]:dark_sunglasses:""")
 
 # with top_d_second:
@@ -96,7 +99,8 @@ with first_col:
         get_python_libs_info()
 
 with second_col:
-    st.markdown('O')
+    with st.expander("Characteristics"):
+        st.image(r"streamlit_cv/resource/images/Characteristics.jpeg", width=500)
 
 col1, col2 = st.columns(2)
 

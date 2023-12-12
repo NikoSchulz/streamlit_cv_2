@@ -9,6 +9,8 @@ import yfinance as yf
 from prophet import Prophet
 import numpy as np
 
+from helper.stlyle_page import add_bar_styling
+
 st.set_page_config(layout='wide')
 
 
@@ -21,7 +23,6 @@ class FinanceAnalyser:
         self.company_name = ""
         self.data = None
         self.option = ""
-        self.insert_example_table()
         st.markdown("# ")
 
     def filter_special_values(self):
@@ -48,9 +49,10 @@ class FinanceAnalyser:
             if symbol_value:
                 print('mmm')
                 print(symbol_value)
-                self.start_analyse(symbol_value)
+                # self.start_analyse(symbol_value)
             # st.dataframe(self.symbol_mapping, use_container_width=True, hide_index=True)
             st.markdown('# ')
+        return table
 
     def start_analyse(self, symbol):
         self.update_symbol(symbol)
@@ -113,7 +115,15 @@ def calculate_percent(max_value, current):
     return current / max_value
 
 
+add_bar_styling()
 symbol_as_text = st.text_input("Type finance Symbol for starting analysis: Default value = META", value="META",
                                key="placeholder")
 finance_analyser = FinanceAnalyser()
+table_data = finance_analyser.insert_example_table()
+try:
+    symbol_value = table_data.selected_rows[0]['Symbol']
+except:
+    symbol_value = ''
+
+symbol_as_text = symbol_value or symbol_as_text
 finance_analyser.start_analyse(symbol_as_text)
