@@ -5,6 +5,7 @@ import time
 
 from data.education_info import get_education_list
 from data.skills_info import get_ide_info, get_version_control_info, get_languages, get_python_libs_info
+from helper.carousel import add_carousel
 from helper.stlyle_page import add_bar_styling
 
 st.set_page_config(layout='wide')
@@ -49,6 +50,12 @@ class EducationData(BaseModel):
 # )
 
 top_data, top_d_second = st.columns(2)
+with top_d_second:
+    st.markdown('# ')
+    st.markdown('# ')
+    st.markdown('# ')
+    add_carousel()
+
 first_col, second_col = st.columns(2)
 st.markdown("""
     <style>
