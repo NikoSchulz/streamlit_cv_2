@@ -66,6 +66,7 @@ class FinanceAnalyser:
             progress_value = calculate_percent(len(function_calls), count)
             print(progress_value)
             my_bar.progress(progress_value, text=value)
+        st.toast("Yeah! Forecast calculated")
 
     def load_data(self):
         self.data = yf.Ticker(self.symbol).history(period='5y')
